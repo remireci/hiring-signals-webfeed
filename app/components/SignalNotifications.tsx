@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { getTargetProfileLabel } from "@/config/targetProfileLabels";
+// import { getTargetProfileLabel } from "@/config/targetProfileLabels";
 
 interface NotificationSignal {
   signal_id: string;
@@ -66,7 +66,7 @@ function notifyNewSignals(signals: NotificationSignal[]) {
 
   //   const body = signals.map((signal) => signal.company_name).join(" · ");
 
-  const targetProfile = getTargetProfileLabel(signals[0].target_profile_id);
+  //   const targetProfile = getTargetProfileLabel(signals[0].target_profile_id);
 
   //   const body =
   //     signals.length === 1
