@@ -150,41 +150,37 @@ export default async function TrialPage({
           <span className="text-sm text-gray-500">Updated automatically</span>
         </div>
 
-        {newSignals.length > 0 && (
-          <section className="mb-10">
-            <div className="flex items-center gap-3 mb-4">
-              <span className="text-xl">
-                {newSignals.length > 0 ? ` 🆕` : "✓"}
-              </span>
+        <section className="mb-10">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="text-xl">
+              {newSignals.length > 0 ? ` 🆕` : "✓"}
+            </span>
 
-              <h2
-                className={`text-sm font-bold uppercase tracking-wider ${
-                  newSignals.length > 0 ? "text-gray-900" : "text-gray-500"
-                }`}
-              >
-                {newSignals.length > 0
-                  ? `${newSignals.length} New Signals`
-                  : "No New Signals"}
-              </h2>
+            <h2
+              className={`text-sm font-bold uppercase tracking-wider ${
+                newSignals.length > 0 ? "text-gray-900" : "text-gray-500"
+              }`}
+            >
+              {newSignals.length > 0
+                ? `${newSignals.length} New Signals`
+                : "No New Signals"}
+            </h2>
 
-              <span className="text-xs font-medium text-gray-400">
-                Last hour
-              </span>
+            <span className="text-xs font-medium text-gray-400">Last hour</span>
+          </div>
+
+          {newSignals.length > 0 ? (
+            <div className="space-y-5">
+              {newSignals.map(({ signal }) => (
+                <SignalCard key={signal.signal_id} signal={signal} isNew />
+              ))}
             </div>
-
-            {newSignals.length > 0 ? (
-              <div className="space-y-5">
-                {newSignals.map(({ signal }) => (
-                  <SignalCard key={signal.signal_id} signal={signal} isNew />
-                ))}
-              </div>
-            ) : (
-              <div className="rounded-xl border border-gray-200 bg-white px-6 py-5 text-sm text-gray-500">
-                No new hiring signals were detected during the last hour.
-              </div>
-            )}
-          </section>
-        )}
+          ) : (
+            <div className="rounded-xl border border-gray-200 bg-white px-6 py-5 text-sm text-gray-500">
+              No new hiring signals were detected during the last hour.
+            </div>
+          )}
+        </section>
 
         {olderSignals.length > 0 && (
           <section>
