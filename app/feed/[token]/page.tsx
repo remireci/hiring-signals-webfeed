@@ -154,7 +154,7 @@ export default async function TrialPage({
           <section className="mb-10">
             <div className="flex items-center gap-3 mb-4">
               <span className="text-xl">
-                {newSignals.length > 0 ? ` 🔥` : "✓"}
+                {newSignals.length > 0 ? ` 🔔` : "✓"}
               </span>
 
               <h2
