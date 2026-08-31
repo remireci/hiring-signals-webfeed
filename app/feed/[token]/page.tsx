@@ -154,7 +154,7 @@ export default async function TrialPage({
           <section className="mb-10">
             <div className="flex items-center gap-3 mb-4">
               <span className="text-xl">
-                {newSignals.length > 0 ? ` 🔔` : "✓"}
+                {newSignals.length > 0 ? ` 🆕` : "✓"}
               </span>
 
               <h2
@@ -190,7 +190,7 @@ export default async function TrialPage({
           <section>
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-sm font-bold uppercase tracking-wider text-gray-500">
-                Earlier Signals
+                🗂️ Earlier Signals
               </h2>
 
               <span className="text-xs text-gray-400">Last 30 days</span>
