@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import AutoRefresh from "@/app/components/AutoRefresh";
 import SignalNotifications from "@/app/components/SignalNotifications";
 import NotificationPermission from "@/app/components/NotificationPermission";
+import UsageInstructionsModal from "@/app/components/UsageInstructionsModal";
 import { getTargetProfileLabel } from "@/config/targetProfileLabels";
 
 interface HiringSignal {
@@ -127,9 +128,10 @@ export default async function TrialPage({
       <SignalNotifications signals={notificationSignals} />
       <div className="max-w-4xl mx-auto px-5 py-10">
         <header className="mb-8">
-          <p className="text-sm font-medium text-blue-600 mb-2">
+          <div className="text-sm font-medium text-blue-600 mb-2">
             HIRING SIGNALS
-          </p>
+            <UsageInstructionsModal />
+          </div>
 
           <h1 className="text-3xl font-bold tracking-tight text-gray-900">
             {customer.name}
