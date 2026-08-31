@@ -144,7 +144,7 @@ export default async function TrialPage({
 
         <div className="mb-6 flex items-center justify-between">
           <h2 className="text-lg font-semibold text-gray-400">
-            {newSignals.length} new signals
+            {/* {newSignals.length} new signals */}
           </h2>
 
           <span className="text-sm text-gray-500">Updated automatically</span>
@@ -286,7 +286,7 @@ function SignalCard({
         </div>
 
         {signal.intensity && signal.intensity !== "LOW" && (
-          <span className="text-xs font-semibold uppercase tracking-wide">
+          <span className="text-xs font-semibold uppercase tracking-wide text-red-300">
             {signal.intensity}
           </span>
         )}
