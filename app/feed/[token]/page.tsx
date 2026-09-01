@@ -237,7 +237,7 @@ function SignalCard({
       : signal.source_url
         ? {
             url: signal.source_url,
-            label: "View source vacancy →",
+            label: "View vacancy →",
           }
         : signal.company_domain
           ? {
