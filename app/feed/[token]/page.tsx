@@ -324,6 +324,7 @@ function SignalCard({
         <p className="mt-4 text-xs text-gray-400">
           Detected{" "}
           {new Date(signal.detected_at).toLocaleString("en-BE", {
+            timeZone: "Europe/Brussels",
             day: "numeric",
             month: "short",
             hour: "2-digit",
